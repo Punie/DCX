@@ -6,7 +6,7 @@ public class WikiApp
 {
 	public static void main (String[] args)
 	{
-		Wiki wiki = null;
+		Wiki wiki = new Wiki ();
 		User toto = new User ();
 		User tata = new User ();
 		Article article1 = new Article ();
