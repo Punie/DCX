@@ -50,18 +50,6 @@ public class Article extends Content
 		_comments.remove (comment);
 	}
 	
-	// TOSTRING
-	@Override
-	public String toString ()
-	{
-		return 	"Date : " + _date + 
-				"\nTitle : " + _title + 
-				"\nText : " + _text + 
-				"\nAuthor : " + _author +
-				"\nNombre de likes : " + _nbLike +
-				"\nNombre de commentaires : " + _comments.size () + "\n";
-	}
-	
 	// Getters & Setters
 	public int nbLike () { return _nbLike; }
 	public void setNbLike (int nbLike) { _nbLike = nbLike; }
@@ -71,6 +59,24 @@ public class Article extends Content
 	
 	public List<Comment> comments () { return _comments; }
 	public void setComments (List<Comment> comments) { _comments = comments; }
+	
+	// toString () - for testing purposes
+	@Override
+	public String toString ()
+	{
+		String article =	"Date : " + _date + 
+							"\nTitle : " + _title + 
+							"\nText : " + _text + 
+							"\nAuthor : " + _author +
+							"\nNombre de likes : " + _nbLike +
+							"\nNombre de commentaires : " + _comments.size () + 
+							"\n----------\nCommentaires\n----------\n";
+		
+		for (Comment comment : _comments)
+			article += comment;
+		
+		return article;		
+	}
 	
 	// Properties
 	private int _nbLike;

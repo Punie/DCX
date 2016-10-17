@@ -27,7 +27,11 @@ public class Wiki
 		_articles.remove (article);
 	}
 	
-	// TOSTRING
+	// Getters & Setters
+	public List<Article> articles () { return _articles; }
+	public void setArticles (List<Article> articles) { _articles = articles; }
+	
+	// toString () - for testing purposes
 	@Override
 	public String toString ()
 	{
@@ -35,15 +39,11 @@ public class Wiki
 		
 		for (Article article : _articles)
 		{
-			wiki += article + "--------------------------------------------------\n";
+			wiki += article + "##################################################\n";
 		}
 		
 		return wiki;
 	}
-	
-	// Getters & Setters
-	public List<Article> articles () { return _articles; }
-	public void setArticles (List<Article> articles) { _articles = articles; }
 	
 	// Properties
 	private List<Article> _articles;

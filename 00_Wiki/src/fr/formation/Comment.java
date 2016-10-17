@@ -13,4 +13,12 @@ public class Comment extends Content
 	{
 		super (author, date, text);
 	}
+	
+	@Override
+	public String toString ()
+	{
+		return 	"    Date : " + _date +
+				"\n    Author : " + _author +
+				"\n    Text : " + _text + "\n----------\n";
+	}
 }

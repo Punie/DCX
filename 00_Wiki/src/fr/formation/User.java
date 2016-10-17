@@ -15,16 +15,6 @@ public class User
 		_userName = userName;
 	}
 	
-	// TOSTRING
-	@Override
-	public String toString ()
-	{
-		if (_firstName == null || _lastName == null)
-			return _userName;
-		
-		return _userName + " (" + _firstName + " " + _lastName + ")";
-	}
-	
 	// Getters & Setters
 	public String firstName () { return _firstName; }
 	public void setFirstName (String firstName) { _firstName = firstName; }
@@ -35,6 +25,16 @@ public class User
 	public String userName () {	return _userName; }
 	public void setUserName (String userName) { _userName = userName; }
 
+	// toString () - for testing purposes
+	@Override
+	public String toString ()
+	{
+		if (_firstName == null || _lastName == null)
+			return _userName;
+		
+		return _userName + " (" + _firstName + " " + _lastName + ")";
+	}
+	
 	// Properties
 	private String _firstName;
 	private String _lastName;

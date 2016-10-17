@@ -1,5 +1,7 @@
 package fr.formation;
 
+import java.util.Date;
+
 public class WikiApp
 {
 	public static void main (String[] args)
@@ -10,9 +12,9 @@ public class WikiApp
 		Article article1 = new Article ();
 		Article article2 = new Article ();
 		Article article3 = new Article ();
-		Comment comment1 = new Comment ();
-		Comment comment2 = new Comment ();
-		Comment comment3 = new Comment ();
+		Comment comment1 = new Comment (tata, new Date (), "Premier commentaire \\o/");
+		Comment comment2 = new Comment (toto, new Date (), "Gnagnagna !");
+		Comment comment3 = new Comment (toto, new Date (), "Hello o/");
 		
 		toto.setUserName ("Toto");
 		
