@@ -1,9 +1,11 @@
 package fr.hugo.formation;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class Containers
@@ -39,6 +41,13 @@ public class Containers
 		set.add (a3);
 		set.add (a1);
 		set.add (a2);
+		
+		Map<String, A> map = new HashMap<String, A> ();
+		map.put ("a1", a1);
+		map.put ("a2", a2);
+		map.put ("a3", a3);
+		map.put ("a4", a4);
+		map.put ("a5", a5);
 
 		System.out.println ("Taille de la liste 'list' : " + heteroList.size ());
 		
@@ -74,7 +83,7 @@ public class Containers
 		Iterator<A> iterator = set.iterator ();
 		while (iterator.hasNext ())
 		{
-			iterator.next ().m1 ();
+			iterator.next().m1 ();
 		}
 		
 		System.out.println ("Parcours Liste + Set");
@@ -85,5 +94,14 @@ public class Containers
 		System.out.println ("    Set");
 		for (A a : set)
 			a.m1 ();
+		
+		System.out.println ();
+		
+		System.out.println ("Parcours Map");
+		for (String key : map.keySet ())
+		{
+			System.out.println ("Key : " + key);
+			map.get(key).m1 ();
+		}
 	}
 }
