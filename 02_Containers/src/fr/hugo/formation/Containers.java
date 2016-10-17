@@ -100,8 +100,7 @@ public class Containers
 		System.out.println ("Parcours Map");
 		for (String key : map.keySet ())
 		{
-			System.out.println ("Key : " + key);
-			map.get(key).m1 ();
+			System.out.println ("Key : " + key + " | Value : " + map.get (key));
 		}
 	}
 }

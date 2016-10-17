@@ -6,4 +6,9 @@ public class A
 	{
 		System.out.println ("Méthode m1 de la classe A.");
 	}
+	
+	public String toString ()
+	{
+		return "Objet A";
+	}
 }
