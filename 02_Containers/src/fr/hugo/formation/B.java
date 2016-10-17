@@ -4,6 +4,6 @@ public class B
 {
 	public void m1 ()
 	{
-		System.out.println ("Méthode m1 de la classe B.");
+		System.out.println ("MÃ©thode m1 de la classe B.");
 	}
 }
