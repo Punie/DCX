@@ -19,6 +19,6 @@ public class Comment extends Content
 	{
 		return 	"  | Date : " + _date +
 				"\n  | Author : " + _author +
-				"\n  | Text : " + _text + "\n  +--------+\n";
+				"\n  | Text : " + _text + "\n  +------------------+\n";
 	}
 }
