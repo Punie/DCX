@@ -27,6 +27,7 @@ public class Wiki
 		_articles.remove (article);
 	}
 	
+	// TOSTRING
 	@Override
 	public String toString ()
 	{

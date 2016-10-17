@@ -1,10 +1,16 @@
 package fr.formation;
 
+import java.util.Date;
+
 public class Comment extends Content
 {
-	@Override
-	public String toString ()
+	public Comment ()
 	{
-		return "";
+		super ();
+	}
+	
+	public Comment (User author, Date date, String text)
+	{
+		super (author, date, text);
 	}
 }

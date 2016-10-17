@@ -47,6 +47,7 @@ public class Article extends Content
 		_comments.remove (comment);
 	}
 	
+	// TOSTRING
 	@Override
 	public String toString ()
 	{

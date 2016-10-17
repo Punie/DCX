@@ -15,6 +15,7 @@ public class User
 		_userName = userName;
 	}
 	
+	// TOSTRING
 	@Override
 	public String toString ()
 	{
