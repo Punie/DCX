@@ -57,7 +57,8 @@ public class Article extends Content
 		return 	"Date : " + _date + 
 				"\nTitle : " + _title + 
 				"\nText : " + _text + 
-				"\nAuthor : " + _author + 
+				"\nAuthor : " + _author +
+				"\nNombre de likes : " + _nbLike +
 				"\nNombre de commentaires : " + _comments.size () + "\n";
 	}
 	

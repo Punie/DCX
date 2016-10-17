@@ -10,8 +10,12 @@ public class WikiApp
 		Article article1 = new Article ();
 		Article article2 = new Article ();
 		Article article3 = new Article ();
+		Comment comment1 = new Comment ();
+		Comment comment2 = new Comment ();
+		Comment comment3 = new Comment ();
 		
 		toto.setUserName ("Toto");
+		
 		tata.setUserName ("Tata");
 		tata.setFirstName ("Jane");
 		tata.setLastName ("Doe");
@@ -24,12 +28,17 @@ public class WikiApp
 		article2.setAuthor (toto);
 		article2.setTitle ("Article 2");
 		article2.setText ("Le second article de Toto !\nOn commence à s'amuser !");
+		article2.setNbLike (5);
 		wiki.addArticle (article2);
 		
 		article3.setAuthor (tata);
 		article3.setTitle ("Article 3");
 		article3.setText ("L'article de Tata ! o/");
 		wiki.addArticle (article3);
+		
+		article1.addComment (comment1);
+		article1.addComment (comment2);
+		article2.addComment (comment3);
 		
 		System.out.println (wiki);
 	}
