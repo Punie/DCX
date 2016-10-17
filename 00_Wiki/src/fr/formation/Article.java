@@ -68,10 +68,11 @@ public class Article extends Content
 							"\nTitle : " + _title + 
 							"\nText : " + _text + 
 							"\nAuthor : " + _author +
-							"\nNombre de likes : " + _nbLike +
-							"\nNombre de commentaires : " + _comments.size () + 
-							"\n----------\nCommentaires\n----------\n";
+							"\nLikes : " + _nbLike +
+							"\nComments : " + _comments.size () + "\n";
 		
+		if (_comments.size () > 0)
+			article += "+----------+\n| Comments |\n+----------+\n";
 		for (Comment comment : _comments)
 			article += comment;
 		
