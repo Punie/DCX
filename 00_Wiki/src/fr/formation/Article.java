@@ -10,6 +10,9 @@ public class Article extends Content
 	public Article ()
 	{
 		super ();
+		_nbLike = 0;
+		_title = "";
+		_comments = new ArrayList<Comment> ();
 	}
 
 	public Article (int nbLike, String title, List<Comment> comments)
@@ -51,7 +54,11 @@ public class Article extends Content
 	@Override
 	public String toString ()
 	{
-		return "Date : " + _date + "\nTitle : " + _title + "\nText : " + _text + "\nAuthor : " + _author + "\n";
+		return 	"Date : " + _date + 
+				"\nTitle : " + _title + 
+				"\nText : " + _text + 
+				"\nAuthor : " + _author + 
+				"\nNombre de commentaires : " + _comments.size () + "\n";
 	}
 	
 	// Getters & Setters
