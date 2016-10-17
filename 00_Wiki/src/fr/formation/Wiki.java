@@ -27,6 +27,19 @@ public class Wiki
 		_articles.remove (article);
 	}
 	
+	@Override
+	public String toString ()
+	{
+		String wiki = "";
+		
+		for (Article article : _articles)
+		{
+			wiki += article + "--------------------------------------------------\n";
+		}
+		
+		return wiki;
+	}
+	
 	// Getters & Setters
 	public List<Article> articles () { return _articles; }
 	public void setArticles (List<Article> articles) { _articles = articles; }

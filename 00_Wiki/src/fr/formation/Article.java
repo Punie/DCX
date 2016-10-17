@@ -47,6 +47,12 @@ public class Article extends Content
 		_comments.remove (comment);
 	}
 	
+	@Override
+	public String toString ()
+	{
+		return "Date : " + _date + "\nTitle : " + _title + "\nText : " + _text + "\nAuthor : " + _author + "\n";
+	}
+	
 	// Getters & Setters
 	public int nbLike () { return _nbLike; }
 	public void setNbLike (int nbLike) { _nbLike = nbLike; }
