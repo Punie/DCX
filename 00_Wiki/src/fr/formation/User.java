@@ -15,6 +15,15 @@ public class User
 		_userName = userName;
 	}
 	
+	@Override
+	public String toString ()
+	{
+		if (_firstName == null || _lastName == null)
+			return _userName;
+		
+		return _userName + " (" + _firstName + " " + _lastName + ")";
+	}
+	
 	// Getters & Setters
 	public String firstName () { return _firstName; }
 	public void setFirstName (String firstName) { _firstName = firstName; }
