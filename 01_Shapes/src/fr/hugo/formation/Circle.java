@@ -36,7 +36,7 @@ public class Circle extends Shape implements IShape
         System.out.println ("Rayon : " + _radius);
         System.out.println ("Pi : " + Pi);
         System.out.println ("Couleur : " + _color);
-        System.out.println ("CirconfÃ©rence : " + perimeter ());
+        System.out.println ("Circonférence : " + perimeter ());
         System.out.println ("Aire : " + area ());
         System.out.println();
     }

@@ -35,9 +35,9 @@ public class Square extends Rectangle implements IShape
     public void display ()
     {
         System.out.println (_name);
-        System.out.println ("CÃ´tÃ© : " + side ());
+        System.out.println ("Côté : " + side ());
         System.out.println ("Couleur : " + _color);
-        System.out.println ("PÃ©rimÃ¨tre : " + perimeter ());
+        System.out.println ("Périmètre : " + perimeter ());
         System.out.println ("Aire : " + area ());
         System.out.println ();
     }
