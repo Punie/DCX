@@ -30,7 +30,7 @@ public abstract class Content
 	public void setText (String text) { _text = text; }
 	
 	// Properties
-	private User _author;
-	private Date _date;
-	private String _text;
+	protected User _author;
+	protected Date _date;
+	protected String _text;
 }
