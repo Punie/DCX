@@ -2,7 +2,7 @@ package fr.formation;
 
 import java.util.Date;
 
-public class Content
+public abstract class Content
 {
 	// Constructors
 	public Content ()
