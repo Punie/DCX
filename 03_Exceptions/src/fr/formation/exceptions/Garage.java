@@ -57,11 +57,7 @@ public class Garage
 		}
 		catch (CamelCaseException e)
 		{
-			System.out.println ("Error : " + e);
-		}
-		finally
-		{
-			System.out.println ("Done !");
+			e.error ();
 		}
 	}
 }
