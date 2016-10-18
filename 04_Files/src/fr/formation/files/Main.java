@@ -1,6 +1,5 @@
 package fr.formation.files;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -10,12 +9,10 @@ public class Main
 {
 	public static void main (String[] args)
 	{
-		Path p = Paths.get ("src/fr/formation/files/data.txt");
+		Path p = Paths.get ("../03_Exceptions/src/fr/formation/exceptions/Vehicle.java");
 		try
 		{
-			BufferedReader buffer = Files.newBufferedReader (p);
-			System.out.println (buffer.readLine ());
-			System.out.println (buffer.readLine ());
+			Files.readAllLines (p).forEach (line -> System.out.println (line.toUpperCase ()));
 		}
 		catch (IOException e)
 		{
