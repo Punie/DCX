@@ -36,14 +36,14 @@ public class Circle extends Shape implements IShape
         System.out.println ("Rayon : " + _radius);
         System.out.println ("Pi : " + Pi);
         System.out.println ("Couleur : " + _color);
-        System.out.println ("Circonf�rence : " + perimeter ());
+        System.out.println ("Circonférence : " + perimeter ());
         System.out.println ("Aire : " + area ());
         System.out.println();
     }
 
 
     // Class Field for PI
-    public static final float Pi = 3.14f;
+    public static final float Pi = (float) Math.PI;
     private static int count = 0;
 
     // Instance Field

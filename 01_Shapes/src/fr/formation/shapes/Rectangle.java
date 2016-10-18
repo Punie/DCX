@@ -40,7 +40,7 @@ public class Rectangle extends Shape implements IShape
         System.out.println ("Longueur : " + _length);
         System.out.println ("Largeur : " + _width);
         System.out.println ("Couleur : " + _color);
-        System.out.println ("P�rim�tre : " + perimeter ());
+        System.out.println ("Périmètre : " + perimeter ());
         System.out.println ("Aire : " + area ());
         System.out.println ();
     }

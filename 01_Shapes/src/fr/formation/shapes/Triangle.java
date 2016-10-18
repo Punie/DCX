@@ -50,7 +50,7 @@ public class Triangle extends Shape implements IShape
             System.out.println ("Base : " + base ());
             System.out.println ("Hauteur : " + height ());
             System.out.println ("Couleur : " + _color);
-            System.out.println ("P�rim�tre : " + perimeter ());
+            System.out.println ("Périmètre : " + perimeter ());
             System.out.println ("Aire : " + area ());
             System.out.println ();
         }

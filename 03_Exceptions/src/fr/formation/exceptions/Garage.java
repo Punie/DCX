@@ -48,5 +48,20 @@ public class Garage
 			}
 			// Sans ces conditions on aurait une exception
 		}
+		
+		Vehicle v = new Vehicle ();
+		
+		try
+		{
+			v.setBrand ("opel");
+		}
+		catch (CamelCaseException e)
+		{
+			System.out.println ("Error : " + e);
+		}
+		finally
+		{
+			System.out.println ("Done !");
+		}
 	}
 }
