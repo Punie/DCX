@@ -1,5 +1,6 @@
 package fr.formation.exceptions;
 
+@SuppressWarnings ("serial")
 public class CamelCaseException extends Exception
 {
 	public void error ()

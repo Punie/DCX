@@ -10,6 +10,7 @@ import java.util.Set;
 
 public class Containers
 {
+	@SuppressWarnings ("unchecked")
 	public static void main (String[] args)
 	{
 		A a1 = new A ();
@@ -19,6 +20,7 @@ public class Containers
 		A a5 = new A ();
 		B b1 = new B ();
 		
+		@SuppressWarnings ("rawtypes") 
 		List heteroList = new ArrayList ();
 		heteroList.add (a1);
 		heteroList.add (a2);
