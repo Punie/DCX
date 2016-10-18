@@ -1,4 +1,4 @@
-package fr.hugo.formation;
+package fr.formation.shapes;
 
 public abstract class Shape implements IShape
 {

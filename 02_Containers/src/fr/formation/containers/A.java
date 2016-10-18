@@ -1,4 +1,4 @@
-package fr.hugo.formation;
+package fr.formation.containers;
 
 public class A
 {

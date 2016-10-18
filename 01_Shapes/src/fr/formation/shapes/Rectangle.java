@@ -1,4 +1,4 @@
-package fr.hugo.formation;
+package fr.formation.shapes;
 
 public class Rectangle extends Shape implements IShape
 {
@@ -40,7 +40,7 @@ public class Rectangle extends Shape implements IShape
         System.out.println ("Longueur : " + _length);
         System.out.println ("Largeur : " + _width);
         System.out.println ("Couleur : " + _color);
-        System.out.println ("Périmètre : " + perimeter ());
+        System.out.println ("Pï¿½rimï¿½tre : " + perimeter ());
         System.out.println ("Aire : " + area ());
         System.out.println ();
     }

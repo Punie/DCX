@@ -1,4 +1,4 @@
-package fr.formation;
+package fr.formation.wiki;
 
 import java.util.ArrayList;
 import java.util.Date;
