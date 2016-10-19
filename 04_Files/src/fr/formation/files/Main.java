@@ -93,31 +93,29 @@ public class Main
 	
 	public static void ls (Path p) throws IOException
 	{
-		DirectoryStream<Path> ds = Files.newDirectoryStream (p);
-		for (Path path : ds)
-		{
-			System.out.println (" --> " + path);
-			if (Files.isDirectory (path))
-			{
-				ls (path);
-			}
-		}
+		System.out.println (" . " + p.getFileName ());
+		tree (p, " |____ ");
 	}
 	
-	public static void tree (Path p, String pre) throws IOException
+	private static void tree (Path p, String pre) throws IOException
 	{
 		DirectoryStream<Path> ds = Files.newDirectoryStream (p);
 		for (Path path : ds)
 		{
-			System.out.println (pre + " --> " + path.getFileName ());
+			System.out.println (pre + path.getFileName ());
 			if (Files.isDirectory (path))
 			{
-				tree (path, pre + "   ");
+				tree (path, "   " + pre);
 			}
 		}
 	}
 	
+	public static void createFile (Path p) throws IOException
+	{
+		Files.createFile (p);
+	}
 	
+	@SuppressWarnings("unused")
 	public static void main (String[] args)
 	{
 		Path pFile = Paths.get ("../03_Exceptions/src/fr/formation/exceptions/Vehicle.java");
@@ -126,12 +124,13 @@ public class Main
 
 		try
 		{
-			printFileShenanigans(pFile);
-			testFiles();
-			copyFile (pFile, pCopy);
-			deleteFile(pCopy);
-			tree (pDir, "");
+//			printFileShenanigans(pFile);
+//			testFiles();
+//			copyFile (pFile, pCopy);
 			ls (pDir);
+//			deleteFile (Paths.get ("toto.txt"));
+//			createFile (Paths.get ("toto.txt"));
+//			deleteFile (Paths.get ("toto.txt"));
 		}
 		catch (IOException e)
 		{
