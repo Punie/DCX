@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 
 public class Main
 {
@@ -12,7 +13,47 @@ public class Main
 		Path p = Paths.get ("../03_Exceptions/src/fr/formation/exceptions/Vehicle.java");
 		try
 		{
-			Files.readAllLines (p).forEach (line -> System.out.println (line.toUpperCase ()));
+			List<String> lines = Files.readAllLines(p);
+			
+			// Print Vehicle.java in upper case
+			System.out.println ("UPPER CASE\n----------\n");
+			lines.forEach (line -> System.out.println (line.toUpperCase ()));
+			
+			System.out.println ("\n\n");
+			
+			// Print Vehicle.java from the bottom up
+			System.out.println ("BOTTOM UP\n----------\n");
+			for (int i = lines.size () - 1 ; i >= 0 ; --i)
+				System.out.println (lines.get (i));
+			
+			System.out.println ("\n\n");
+			
+			// Print Vehicle.java with each line inverted
+			System.out.println ("MIRROR\n----------\n");
+			for(String line : lines)
+            {
+            	String reverse = "";
+            	for (int i = line.length () - 1; i >= 0; --i)
+            	{
+            		reverse += line.charAt (i);
+            	}
+            	System.out.println (reverse);
+            }
+			
+			System.out.println ("\n\n");
+			
+			// Print Vehicle.java in full reverse and upper case
+			System.out.println ("REVERSE UPPER CASE\n----------\n");
+			for(int i = lines.size () - 1 ; i >= 0 ; --i)
+            {
+				String line = lines.get (i);
+            	String reverse = "";
+            	for (int j = line.length () - 1; j >= 0; --j)
+            	{
+            		reverse += line.charAt (j);
+            	}
+            	System.out.println (reverse.toUpperCase ());
+            }	
 		}
 		catch (IOException e)
 		{
