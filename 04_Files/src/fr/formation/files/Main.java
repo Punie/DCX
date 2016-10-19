@@ -13,7 +13,7 @@ public class Main
 		Path p = Paths.get ("../03_Exceptions/src/fr/formation/exceptions/Vehicle.java");
 		try
 		{
-			List<String> lines = Files.readAllLines(p);
+			List<String> lines = Files.readAllLines (p);
 			
 			// Print Vehicle.java in upper case
 			System.out.println ("UPPER CASE\n----------\n");
@@ -31,24 +31,18 @@ public class Main
 			// Print Vehicle.java with each line inverted
 			System.out.println ("MIRROR\n----------\n");
 			for(String line : lines)
-            {
-            	StringBuilder l = new StringBuilder (line);
-            	System.out.println (l.reverse ());
-            }
+            	System.out.println (new StringBuilder (line).reverse ());
 			
 			System.out.println ("\n\n");
 			
 			// Print Vehicle.java in full reverse and upper case
 			System.out.println ("REVERSE UPPER CASE\n----------\n");
 			for(int i = lines.size () - 1 ; i >= 0 ; --i)
-            {
-				StringBuilder l = new StringBuilder (lines.get (i));
-            	System.out.println (l.reverse ().toString ().toUpperCase ());
-            }	
+				System.out.println (new StringBuilder (lines.get (i)).reverse ().toString ().toUpperCase ());
 		}
 		catch (IOException e)
 		{
-			System.out.println ("Error : " + e.getMessage ());
+			System.out.println ("Error : " + e.getMessage () + " could not be opened!");
 		}
 	}
 }
