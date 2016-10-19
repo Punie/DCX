@@ -1,6 +1,7 @@
 package fr.formation.files;
 
 import java.io.IOException;
+import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -8,9 +9,9 @@ import java.util.List;
 
 public class Main
 {
-	public static void main (String[] args)
+	public static void printFileShenanigans (String file)
 	{
-		Path p = Paths.get ("../03Exceptions/src/fr/formation/exceptions/Vehicle.java");
+		Path p = Paths.get (file);
 		try
 		{
 			List<String> lines = Files.readAllLines (p);
@@ -44,7 +45,10 @@ public class Main
 		{
 			System.out.println ("Error : " + e.getMessage () + " could not be opened!\n");
 		}
-		
+	}
+	
+	public static void testFiles ()
+	{
 		Path p1 = Paths.get ("src/fr/formation/files/Main.java");
 		Path p2 = Paths.get ("src/");
 		Path p3 = Paths.get ("src/fr/formation/files/Main.java");
@@ -96,5 +100,27 @@ public class Main
 		System.out.println ("p1 isWritable? " + Files.isWritable (p1));
 		System.out.println ("p2 isWritable? " + Files.isWritable (p2));
 		System.out.println ("p4 isWritable? " + Files.isWritable (p4));
+	}
+	
+	public static void copyFile (String file1, String file2)
+	{
+		Path p1 = Paths.get (file1);
+		Path p2 = Paths.get (file2);
+		try
+		{
+			Files.copy (p1, p2);
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public static void main (String[] args)
+	{
+		// printFileShenanigans("../03_Exceptions/src/fr/formation/exceptions/Vehicle.java");
+		// testFiles();
+		copyFile ("../03_Exceptions/src/fr/formation/exceptions/Vehicle.java","../../../Desktop/Vehicle.txt");
 	}
 }
