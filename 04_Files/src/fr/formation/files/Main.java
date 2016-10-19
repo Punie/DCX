@@ -92,7 +92,7 @@ public class Main
 		System.out.println (exists);
 	}
 	
-	public static void ls (Path p) throws IOException
+	public static void tree (Path p) throws IOException
 	{
 		System.out.println (" . " + p.getFileName ());
 		tree (p, " |____ ");
@@ -140,7 +140,7 @@ public class Main
 //			printFileShenanigans(pFile);
 //			testFiles();
 //			copyFile (pFile, pCopy);
-			ls (pDir);
+			tree (pDir);
 //			deleteFile (pToto);
 //			createFile (pToto);
 //			write (pToto, lines);
