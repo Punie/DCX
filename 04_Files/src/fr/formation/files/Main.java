@@ -1,7 +1,6 @@
 package fr.formation.files;
 
 import java.io.IOException;
-import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -116,11 +115,26 @@ public class Main
 		}
 	}
 	
+	public static void deleteFile (String file)
+	{
+		Path p = Paths.get (file);
+		try
+		{
+			boolean exists = Files.deleteIfExists (p);
+			System.out.println (exists);
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
 	
 	public static void main (String[] args)
 	{
-		// printFileShenanigans("../03_Exceptions/src/fr/formation/exceptions/Vehicle.java");
-		// testFiles();
-		copyFile ("../03_Exceptions/src/fr/formation/exceptions/Vehicle.java","../../../Desktop/Vehicle.txt");
+		printFileShenanigans("../03_Exceptions/src/fr/formation/exceptions/Vehicle.java");
+		testFiles();
+		copyFile ("../03_Exceptions/src/fr/formation/exceptions/Vehicle.java", "../../../Desktop/Vehicle.txt");
+		deleteFile("../../../Desktop/Vehicle.txt");	
 	}
 }
