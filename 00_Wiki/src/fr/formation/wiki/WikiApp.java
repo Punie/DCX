@@ -8,7 +8,7 @@ public class WikiApp
 	{
 		Wiki wiki = new Wiki ();
 		User toto = new User ();
-		User tata = new User ();
+		User tata = new User ("Tata", "Jane", "Doe", TypeUser.MODERATOR);
 		Article article1 = new Article ();
 		Article article2 = new Article ();
 		Article article3 = new Article ();
@@ -17,10 +17,7 @@ public class WikiApp
 		Comment comment3 = new Comment (toto, new Date (), "Hello o/");
 		
 		toto.setUserName ("Toto");
-		
-		tata.setUserName ("Tata");
-		tata.setFirstName ("Jane");
-		tata.setLastName ("Doe");
+		toto.setType (TypeUser.AUTHOR);
 		
 		article1.setAuthor (toto);
 		article1.setTitle ("Article 1");
