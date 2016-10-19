@@ -32,10 +32,10 @@ public class Main
 			System.out.println ("MIRROR\n----------\n");
 			for(String line : lines)
             {
-            	String reverse = "";
+            	StringBuilder reverse = new StringBuilder ();
             	for (int i = line.length () - 1; i >= 0; --i)
             	{
-            		reverse += line.charAt (i);
+            		reverse.append (line.charAt (i));
             	}
             	System.out.println (reverse);
             }
@@ -47,12 +47,12 @@ public class Main
 			for(int i = lines.size () - 1 ; i >= 0 ; --i)
             {
 				String line = lines.get (i);
-            	String reverse = "";
-            	for (int j = line.length () - 1; j >= 0; --j)
+            	StringBuilder reverse = new StringBuilder ();
+            	for (int j = line.length () - 1 ; j >= 0 ; --j)
             	{
-            		reverse += line.charAt (j);
+            		reverse.append (line.charAt (j));
             	}
-            	System.out.println (reverse.toUpperCase ());
+            	System.out.println (reverse.toString ().toUpperCase ());
             }	
 		}
 		catch (IOException e)
