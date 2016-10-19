@@ -5,6 +5,7 @@ import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main
@@ -115,12 +116,24 @@ public class Main
 		Files.createFile (p);
 	}
 	
+	public static void write (Path p, List<String> text) throws IOException
+	{
+		Files.write (p, text);
+	}
+	
 	@SuppressWarnings("unused")
 	public static void main (String[] args)
 	{
 		Path pFile = Paths.get ("../03_Exceptions/src/fr/formation/exceptions/Vehicle.java");
 		Path pCopy = Paths.get ("../../../Desktop/Vehicle.txt");
 		Path pDir = Paths.get ("../00_Wiki");
+		Path pToto = Paths.get ("toto.txt");
+		
+		List<String> lines = new ArrayList<> ();
+		lines.add ("Files are the absolute f**kin' worsts!");
+		lines.add ("I hate them!");
+		lines.add ("They should be destroyed.");
+		lines.add ("A world without files is a world without problems..");
 
 		try
 		{
@@ -128,9 +141,10 @@ public class Main
 //			testFiles();
 //			copyFile (pFile, pCopy);
 			ls (pDir);
-//			deleteFile (Paths.get ("toto.txt"));
-//			createFile (Paths.get ("toto.txt"));
-//			deleteFile (Paths.get ("toto.txt"));
+//			deleteFile (pToto);
+//			createFile (pToto);
+//			write (pToto, lines);
+//			deleteFile (pToto);
 		}
 		catch (IOException e)
 		{
