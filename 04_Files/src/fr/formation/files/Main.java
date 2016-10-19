@@ -98,15 +98,15 @@ public class Main
 		tree (p, " |____ ");
 	}
 	
-	private static void tree (Path p, String pre) throws IOException
+	private static void tree (Path p, String prefix) throws IOException
 	{
 		DirectoryStream<Path> ds = Files.newDirectoryStream (p);
 		for (Path path : ds)
 		{
-			System.out.println (pre + path.getFileName ());
+			System.out.println (prefix + path.getFileName ());
 			if (Files.isDirectory (path))
 			{
-				tree (path, "   " + pre);
+				tree (path, "   " + prefix);
 			}
 		}
 	}

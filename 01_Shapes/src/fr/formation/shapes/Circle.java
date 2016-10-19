@@ -27,14 +27,14 @@ public class Circle extends Shape implements IShape
 
 
     // Implementation of the interface methods
-    public float perimeter () { return 2f * Pi * _radius; }
-    public float area () { return Pi * _radius * _radius; }
+    public float perimeter () { return 2f * PI * _radius; }
+    public float area () { return PI * _radius * _radius; }
 
     public void display ()
     {
         System.out.println (_name);
         System.out.println ("Rayon : " + _radius);
-        System.out.println ("Pi : " + Pi);
+        System.out.println ("Pi : " + PI);
         System.out.println ("Couleur : " + _color);
         System.out.println ("Circonférence : " + perimeter ());
         System.out.println ("Aire : " + area ());
@@ -43,7 +43,7 @@ public class Circle extends Shape implements IShape
 
 
     // Class Field for PI
-    public static final float Pi = (float) Math.PI;
+    public static final float PI = (float) Math.PI;
     private static int count = 0;
 
     // Instance Field
