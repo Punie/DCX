@@ -32,12 +32,8 @@ public class Main
 			System.out.println ("MIRROR\n----------\n");
 			for(String line : lines)
             {
-            	StringBuilder reverse = new StringBuilder ();
-            	for (int i = line.length () - 1; i >= 0; --i)
-            	{
-            		reverse.append (line.charAt (i));
-            	}
-            	System.out.println (reverse);
+            	StringBuilder l = new StringBuilder (line);
+            	System.out.println (l.reverse ());
             }
 			
 			System.out.println ("\n\n");
@@ -46,13 +42,8 @@ public class Main
 			System.out.println ("REVERSE UPPER CASE\n----------\n");
 			for(int i = lines.size () - 1 ; i >= 0 ; --i)
             {
-				String line = lines.get (i);
-            	StringBuilder reverse = new StringBuilder ();
-            	for (int j = line.length () - 1 ; j >= 0 ; --j)
-            	{
-            		reverse.append (line.charAt (j));
-            	}
-            	System.out.println (reverse.toString ().toUpperCase ());
+				StringBuilder l = new StringBuilder (lines.get (i));
+            	System.out.println (l.reverse ().toString ().toUpperCase ());
             }	
 		}
 		catch (IOException e)
