@@ -12,14 +12,15 @@ public class MainApp
         VoitureDAO.updatePrix (10, 20_000);
         VoitureDAO.updateRef (10, "AR0001X6");
 
-        ArrayList<Integer> ids = VoitureDAO.getIds ();
+        ArrayList<Voiture> voitures = VoitureDAO.getAll ();
 
-        for (Integer i : ids)
+        for (Voiture v : voitures)
         {
-            Voiture v = VoitureDAO.getById (i);
             System.out.println (v);
             System.out.println ();
-        }		
+        }
+        
+        DBFactory.closeConnection ();
     }
 
 }

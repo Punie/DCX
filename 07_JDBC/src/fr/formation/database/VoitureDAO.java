@@ -46,23 +46,31 @@ public class VoitureDAO
         return null;
     }
 
-    public static ArrayList<Integer> getIds ()
+    public static ArrayList<Voiture> getAll ()
     {
         Statement st = null;
         ResultSet rs = null;
-        ArrayList<Integer> ids = new ArrayList<Integer> ();
+        ArrayList<Voiture> voitures = new ArrayList<Voiture> ();
 
         try
         {
             st = DBFactory.getConnection ().createStatement ();
-            rs = st.executeQuery ("SELECT id FROM Voiture");
+            rs = st.executeQuery ("SELECT Voiture.id, libelle, pays, ref, couleur, nb_porte, prix::money::numeric "
+                                + "FROM Voiture INNER JOIN Marque ON Voiture.id_marque = Marque.id "
+                                + "ORDER BY Voiture.id");
 
             while (rs.next ())
             {
-                ids.add (rs.getInt ("id"));
+                Voiture voiture = new Voiture (rs.getInt ("id"),
+                                               new Marque (rs.getString ("libelle"), rs.getString ("pays")),
+                                               rs.getString ("ref"),
+                                               rs.getString ("couleur"),
+                                               rs.getInt ("nb_porte"),
+                                               rs.getInt ("prix"));
+                voitures.add (voiture);
             }
 
-            return ids;
+            return voitures;
         }
         catch (SQLException e)
         {

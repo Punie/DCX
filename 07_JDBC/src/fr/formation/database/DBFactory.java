@@ -31,6 +31,11 @@ public class DBFactory
 
         return connection;
     }
+    
+    public static void closeConnection ()
+    {
+        try { if (connection != null) connection.close (); } catch (SQLException e) {}
+    }
 
     private static Connection connection = null;
     private static final String db = "garage";
