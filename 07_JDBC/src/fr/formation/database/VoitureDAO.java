@@ -1,10 +1,35 @@
 package fr.formation.database;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class VoitureDAO
 {
+	public static Voiture getById (int id)
+	{
+		PreparedStatement ps = null;
+		
+		try
+		{
+			String SQL = "SELECT * FROM Voiture INNER JOIN Marque ON Voiture.id_marque = Marque.id WHERE Voiture.id = ?";
+			ps = DBFactory.getConnection ().prepareStatement (SQL);
+			
+			ps.setInt (1, id);
+			ResultSet rs = ps.executeQuery ();
+			
+			rs.next ();
+			
+			return new Voiture (new Marque (rs.getString ("libelle"), rs.getString ("pays")), rs.getString ("ref"), rs.getString ("couleur"), rs.getInt ("nb_porte"));
+		}
+		catch (SQLException e)
+		{
+			e.printStackTrace ();
+		}
+		
+		return null;
+	}
+	
 	public static void updatePrix (int id, int prix)
 	{
 		PreparedStatement ps = null;
