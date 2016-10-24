@@ -9,9 +9,9 @@ public class Comment extends Content
         super ();
     }
 
-    public Comment (User author, Date date, String text)
+    public Comment (int id, User author, Date date, String text)
     {
-        super (author, date, text);
+        super (id, author, date, text);
     }
 
     @Override

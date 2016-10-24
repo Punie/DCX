@@ -23,17 +23,17 @@ public class Article extends Content
         _comments = comments;
     }
 
-    public Article (User author, Date date, String text)
+    public Article (int id, User author, Date date, String text)
     {
-        super (author, date, text);
+        super (id, author, date, text);
         _nbLike = 0;
         _title = "";
         _comments = new ArrayList<Comment> ();
     }
 
-    public Article (User author, Date date, String text, int nbLike, String title, List<Comment> comments)
+    public Article (int id, User author, Date date, String text, int nbLike, String title, List<Comment> comments)
     {
-        super (author, date, text);
+        super (id, author, date, text);
         _nbLike = nbLike;
         _title = title;
         _comments = comments;
