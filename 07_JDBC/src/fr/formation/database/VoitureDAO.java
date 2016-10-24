@@ -3,6 +3,8 @@ package fr.formation.database;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 
 public class VoitureDAO
 {
@@ -12,7 +14,10 @@ public class VoitureDAO
 		
 		try
 		{
-			String SQL = "SELECT * FROM Voiture INNER JOIN Marque ON Voiture.id_marque = Marque.id WHERE Voiture.id = ?";
+			String SQL = "SELECT libelle, pays, ref, couleur, nb_porte, prix::money::numeric "
+						+ "FROM Voiture INNER JOIN Marque ON Voiture.id_marque = Marque.id "
+						+ "WHERE Voiture.id = ?";
+			
 			ps = DBFactory.getConnection ().prepareStatement (SQL);
 			
 			ps.setInt (1, id);
@@ -20,7 +25,38 @@ public class VoitureDAO
 			
 			rs.next ();
 			
-			return new Voiture (new Marque (rs.getString ("libelle"), rs.getString ("pays")), rs.getString ("ref"), rs.getString ("couleur"), rs.getInt ("nb_porte"));
+			return new Voiture (id,
+								new Marque (rs.getString ("libelle"),
+								rs.getString ("pays")),
+								rs.getString ("ref"),
+								rs.getString ("couleur"),
+								rs.getInt ("nb_porte"),
+								rs.getInt ("prix"));
+		}
+		catch (SQLException e)
+		{
+			e.printStackTrace ();
+		}
+		
+		return null;
+	}
+	
+	public static ArrayList<Integer> getIds ()
+	{
+		Statement st = null;
+		ArrayList<Integer> ids = new ArrayList<Integer> ();
+		
+		try
+		{
+			st = DBFactory.getConnection ().createStatement ();
+			ResultSet rs = st.executeQuery ("SELECT id FROM Voiture");
+			
+			while (rs.next ())
+			{
+				ids.add (rs.getInt ("id"));
+			}
+			
+			return ids;
 		}
 		catch (SQLException e)
 		{

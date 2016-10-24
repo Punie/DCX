@@ -1,5 +1,7 @@
 package fr.formation.database;
 
+import java.util.ArrayList;
+
 public class MainApp
 {
 
@@ -10,8 +12,13 @@ public class MainApp
 		VoitureDAO.updatePrix (10, 20_000);
 		VoitureDAO.updateRef (10, "AR0001X6");
 		
-		Voiture v = VoitureDAO.getById (10);
-		System.out.println (v);
+		ArrayList<Integer> ids = VoitureDAO.getIds ();
+		
+		for (Integer i : ids)
+		{
+			Voiture v = VoitureDAO.getById (i);
+			System.out.println (v);
+		}		
 	}
 
 }
