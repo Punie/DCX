@@ -74,3 +74,12 @@ update Voiture set id_marque = (select id from Marque where libelle = 'Toyota') 
 select libelle, couleur, ref, nb_porte
 from Voiture inner join Marque
 on Voiture.id_marque = Marque.id;
+
+alter table Voiture add constraint fk_id_marque foreign key (id_marque) references Marque(id);
+
+alter table Voiture add column prix int default 20000 not null;
+alter table Voiture rename prix to prix2;
+alter table Voiture add column prix money default 0 not null;
+update Voiture set prix = prix2;
+alter table Voiture drop column prix2;
+-- alternatively : alter table Voiture alter column prix type money;
