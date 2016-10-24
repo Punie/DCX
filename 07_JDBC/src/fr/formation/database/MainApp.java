@@ -18,6 +18,7 @@ public class MainApp
 		{
 			Voiture v = VoitureDAO.getById (i);
 			System.out.println (v);
+			System.out.println ();
 		}		
 	}
 

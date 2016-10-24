@@ -11,6 +11,7 @@ public class VoitureDAO
 	public static Voiture getById (int id)
 	{
 		PreparedStatement ps = null;
+		ResultSet rs = null;
 		
 		try
 		{
@@ -21,7 +22,7 @@ public class VoitureDAO
 			ps = DBFactory.getConnection ().prepareStatement (SQL);
 			
 			ps.setInt (1, id);
-			ResultSet rs = ps.executeQuery ();
+			rs = ps.executeQuery ();
 			
 			rs.next ();
 			
@@ -37,6 +38,11 @@ public class VoitureDAO
 		{
 			e.printStackTrace ();
 		}
+		finally
+		{
+		    try { if (rs != null) rs.close (); } catch (SQLException e) {} 
+		    try { if (ps != null) ps.close (); } catch (SQLException e) {}
+		}
 		
 		return null;
 	}
@@ -44,12 +50,13 @@ public class VoitureDAO
 	public static ArrayList<Integer> getIds ()
 	{
 		Statement st = null;
+		ResultSet rs = null;
 		ArrayList<Integer> ids = new ArrayList<Integer> ();
 		
 		try
 		{
 			st = DBFactory.getConnection ().createStatement ();
-			ResultSet rs = st.executeQuery ("SELECT id FROM Voiture");
+			rs = st.executeQuery ("SELECT id FROM Voiture");
 			
 			while (rs.next ())
 			{
@@ -62,6 +69,11 @@ public class VoitureDAO
 		{
 			e.printStackTrace ();
 		}
+		finally
+        {
+            try { if (rs != null) rs.close (); } catch (SQLException e) {} 
+            try { if (st != null) st.close (); } catch (SQLException e) {}
+        }
 		
 		return null;
 	}
@@ -84,6 +96,10 @@ public class VoitureDAO
 		{
 			e.printStackTrace();
 		}
+		finally
+		{
+		    try { if (ps != null) ps.close (); } catch (SQLException e) {}
+		}
 	}
 	
 	public static void updateCouleur (int id, String couleur)
@@ -104,6 +120,10 @@ public class VoitureDAO
 		{
 			e.printStackTrace();
 		}
+		finally
+        {
+            try { if (ps != null) ps.close (); } catch (SQLException e) {}
+        }
 	}
 	
 	public static void updateRef (int id, String ref)
@@ -124,5 +144,9 @@ public class VoitureDAO
 		{
 			e.printStackTrace();
 		}
+		finally
+        {
+            try { if (ps != null) ps.close (); } catch (SQLException e) {}
+        }
 	}
 }
