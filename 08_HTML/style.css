@@ -1,11 +1,12 @@
 body
 {
-  background-color: lightblue;
+  background-color: #282c34;
+  font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier;
 }
 
 h1
 {
-  color: purple;
+  color: #e06c75;
   text-align: center;
 }
 
@@ -13,5 +14,26 @@ p
 {
   font-family: verdana;
   font-size: 20px;
-  color: green;
+  color: #abb2bf;
+}
+
+ul
+{
+  color: #d19a66;
+}
+
+ol
+{
+  color: #e6c07b;
+}
+
+a
+{
+  color: #98c379;
+  text-decoration: none;
+}
+
+img
+{
+  vertical-align: middle;
 }
