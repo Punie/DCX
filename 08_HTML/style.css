@@ -1,8 +1,25 @@
+/*
+  Padding: space between component borders and the component itself
+    ex -> padding: 5px, 10px, 5px, 10px (order = top, right, bottom, left)
+  Margin: space between component borders and its container
+    ex -> margin: 10px, 5px, 10px, 5px (order = top, right, bottom, left)
+*/
+
 body
 {
   background-color: #282c34;
-  font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier;
+  /*font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier;*/
+  font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
   color: #abb2bf;
+}
+
+div
+{
+  border: 1px solid;
+  padding: 20px;
+  margin: 50px;
+  color: #282c34;
+  background-color: #e6c07b;
 }
 
 h1
@@ -34,17 +51,19 @@ a
 
 img
 {
-  vertical-align: middle;
+  display: block;
+  margin: auto;
 }
 
 table
 {
   border-spacing: 2px;
+  margin: auto;
 }
 
 th
 {
-  color: #98c379;
+  color: #e06c75;
   text-decoration: underline;
 }
 
