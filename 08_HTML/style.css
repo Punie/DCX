@@ -49,6 +49,11 @@ a
   text-decoration: none;
 }
 
+a:hover
+{
+  color: #e06c75;
+}
+
 img
 {
   display: block;
@@ -73,4 +78,11 @@ th, td
   text-align: center;
   border: 1px solid;
   border-color: #abb2bf;
+}
+
+.content:hover
+{
+  color: #282c34;
+  font-weight: bold;
+  background-color: #e6c07b;
 }
