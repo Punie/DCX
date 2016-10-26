@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <h1>This is a Header</h1>
+
+    <div>
+      <p>
+        This is a paragraph. <a href="http://www.w3c.org/HTML">This is a link.</a>
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+
+    <div>
+      <p>HTML file content:
+        <ul>
+          <li>Text</li>
+          <li>Formatting
+            <ol>
+              <li><b>Bold</b>, <i>Italic</i>, <u>Underlined</u>, ...</li>
+              <li>Section levels</li>
+              <li>Lists</li>
+            </ol>
+          </li>
+          <li><a href="http://www.google.com/">Links !</a></li>
+          <li>Images</li>
+          <li>Tables</li>
+        </ul>
+        <img src="http://bit.ly/2eqIYwh" alt="Gretchen.gif" />
+      </p>
+    </div>
+
+    <table>
+
+      <tr>
+        <th colspan="4">GARAGE</th>
+      </tr>
+
+      <tr>
+        <th>Ref</th>
+        <th>Color</th>
+        <th>Brand</th>
+        <th>Country</th>
+      </tr>
+
+      <tr class="content">
+        <td>AR0001X6</td>
+        <td>Blue</td>
+        <td>Alpha Romeo</td>
+        <td>Italy</td>
+      </tr>
+
+      <tr class="content">
+        <td>BM0001D5</td>
+        <td>Blue</td>
+        <td>BMW</td>
+        <td>Germany</td>
+      </tr>
+
+      <tr class="content">
+        <td>CH0001Z5</td>
+        <td>Red</td>
+        <td>Chevrolet</td>
+        <td>U.S.A.</td>
+      </tr>
+
+      <tr class="content">
+        <td>ME0001X5</td>
+        <td>Red</td>
+        <td>Mercedes</td>
+        <td>Germany</td>
+      </tr>
+
+      <tr class="content">
+        <td>RO0001R5</td>
+        <td>White</td>
+        <td>Rover</td>
+        <td>U.K.</td>
+      </tr>
+
+    </table>
+
+    <form>
+
+    </form>
+
+    <div class="yellowbox">
+      <form class="flexform">
+        <div>
+          <label for="name">Login : </label>
+          <input type="text" name="login" placeholder="Login" />
+        </div>
+
+        <div>
+          <label for="pwd">Password : </label>
+          <input type="password" name="pwd" placeholder="*****" />
+        </div>
+
+        <div>
+          <label for="country">Country : </label>
+          <select name="country" size="1">
+            <option>France</option>
+            <option>Italy</option>
+            <option>U.K.</option>
+            <option>U.S.A.</option>
+            <option>Zimbabwe</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="gender">Gender : </label>
+          <input type="radio" name="gender" value="male" /> Male
+          <input type="radio" name="gender" value="female" /> Female
+        </div>
+
+        <div>
+          <label for="hobby">Hobbies : </label>
+          <input type="checkbox" name="hobby" value="cooking" /> Cooking
+          <input type="checkbox" name="hobby" value="jogging" /> Jogging
+          <input type="checkbox" name="hobby" value="chillin" /> Chillin'
+          <input type="checkbox" name="hobby" value="sleeping" /> Sleeping
+          <input type="checkbox" name="hobby" value="eating" /> Eating
+        </div>
+
+        <div>
+          <label for="txtarea">Anything worth saying ? </label>
+          <textarea name="txtarea" rows="3" cols="25" placeholder="Tell us about your life !"></textarea>
+        </div>
+
+        <div>
+          <input type="submit" value="Submit" />
+          <input type="reset" value="Reset" />
+        </div>
+      </form>
+    </div>
+
+    <div class="yellowbox">
+      <pre><code>package fr.formation.wiki;
+
+public class WikiApp
+{
+  public static void main (String[] args)
+  {
+    System.out.println ("Hello world! o/");
+  }
+}</code></pre>
+    </div>
+
+    <div class="footer">
+      <p><a href="mailto:toto@tata.com?subject=Garage_stuff">Contact</a></p>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+  </body>
+
+</html>
