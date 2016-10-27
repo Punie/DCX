@@ -1,41 +1,164 @@
+body
+{
+  background-color: #282c34;
+  color: #abb2bf;
+  max-width: 900px;
+  margin: auto;
+}
+
+
+/* HEADER STYLE */
 header
 {
-  border: solid 1px;
+  border: solid 1px #abb2bf;
   margin: 5px;
   padding: 5px;
 }
 
-nav
+header > h1
 {
-  border: solid 1px;
-  margin: 5px;
-  padding: 5px;
+  color: #e06c75;
 }
 
-aside
+/* NAV STYLE */
+.main-menu
 {
-  border: solid 1px;
+  border: solid 1px #abb2bf;
   margin: 5px;
   padding: 5px;
+  display: flex;
 }
 
+.main-menu p
+{
+  flex: auto;
+  text-align: center;
+}
+
+.main-menu a
+{
+  color: #98c379;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.main-menu a:hover
+{
+  text-decoration: underline;
+}
+
+/* SECTION STYLE */
 section
 {
-  border: solid 1px;
+  border: solid 1px #abb2bf;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+}
+
+.sub
+{
+  flex: 3;
+  flex-direction: column;
+}
+
+/* ASIDE STYLE */
+.side-menu
+{
+  flex: 1;
+  border: solid 1px #abb2bf;
   margin: 5px;
   padding: 5px;
 }
 
 article
 {
-  border: solid 1px;
+  border: solid 1px #abb2bf;
   margin: 5px;
   padding: 5px;
+  background-color: #282c34;
+  color: #abb2bf;
+}
+
+/* FORM STYLE */
+form
+{
+  display: flex;
+  margin: auto;
+  padding: 1em;
+}
+
+form > div
+{
+  flex: 1;
+  padding: 1em;
+	border: 1px solid;
+	border-radius: 4px;
+}
+
+div > p
+{
+  display: flex;
+}
+
+form input:not([type=submit])
+{
+  flex: 1;
+}
+
+input
+{
+	padding: .3em;
+	border: 1px solid;
+	border-radius: 4px;
+}
+
+input:focus
+{
+  outline-color: transparent;
+}
+
+input:focus:invalid
+{
+  background-color: #e06c75;
+}
+
+input[type="submit"]
+{
+	padding: .3em 1em;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  margin-left: auto;
+}
+
+label
+{
+	width: 7em;
+	margin-right: .5em;
+	text-align: right;
 }
 
 footer
 {
   border: solid 1px;
   margin: 5px;
+  padding: 5px;
+  display: flex;
+}
+
+footer > div
+{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px;
+}
+
+footer > div > p
+{
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
   padding: 5px;
 }
