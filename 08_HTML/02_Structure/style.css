@@ -86,7 +86,7 @@ a:hover
   color: #e06c75;
 }
 
-input:invalid
+input:focus:invalid
 {
   background-color: #e06c75;
 }
