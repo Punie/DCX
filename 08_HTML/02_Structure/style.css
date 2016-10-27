@@ -7,21 +7,47 @@ body
   margin: auto;
 }
 
-nav ul
+nav
 {
-  list-style: none;
   display: flex;
-  align-items: stretch;
+  align-items: center;
 }
 
-nav li
+nav p
 {
   flex: 1;
+  border: solid 1px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
 }
 
 article
 {
   text-align: justify;
+}
+
+footer
+{
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+footer address
+{
+  display: flex;
+  flex-direction: column;
+}
+
+footer > div
+{
+  justify-content: flex-start;
+}
+
+footer > div + div
+{
+  justify-content: flex-end;
 }
 
 div
