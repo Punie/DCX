@@ -1,0 +1,41 @@
+header
+{
+  border: solid 1px;
+  margin: 5px;
+  padding: 5px;
+}
+
+nav
+{
+  border: solid 1px;
+  margin: 5px;
+  padding: 5px;
+}
+
+aside
+{
+  border: solid 1px;
+  margin: 5px;
+  padding: 5px;
+}
+
+section
+{
+  border: solid 1px;
+  margin: 5px;
+  padding: 5px;
+}
+
+article
+{
+  border: solid 1px;
+  margin: 5px;
+  padding: 5px;
+}
+
+footer
+{
+  border: solid 1px;
+  margin: 5px;
+  padding: 5px;
+}
