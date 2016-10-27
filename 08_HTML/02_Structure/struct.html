@@ -14,11 +14,13 @@
 </header>
 
 <nav>
-  <a href="#">Menu1</a>
-  <a href="#">Menu2</a>
-  <a href="#">Menu3</a>
-  <a href="#">Menu4</a>
-  <a href="#">Menu5</a>
+  <ul>
+    <li><a href="#">Menu1</a></li>
+    <li><a href="#">Menu2</a></li>
+    <li><a href="#">Menu3</a></li>
+    <li><a href="#">Menu4</a></li>
+    <li><a href="#">Menu5</a></li>
+  </ul>
 </nav>
 
 <section>
@@ -103,39 +105,86 @@
   <p>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   </p>
+  <div class="centered">
+    <video src="http://video.webmfiles.org/big-buck-bunny_trailer.webm" preload controls />
+  </div>
 </article>
 
 <aside>
-  <p>
-    Hi o/
-  </p>
-  <div>
-    <label>Tel : </label> <input type="tel" />
-  </div>
-  <div>
-    <label>URL : </label> <input type="url" />
-  </div>
-  <div>
-    <label>email : </label> <input type="email" />
-  </div>
-  <div>
-    <label>Number : </label> <input type="number" />
-  </div>
-  <div>
-    <label>Date : </label> <input type="date" />
-  </div>
-  <div>
-    <label>Month : </label> <input type="month" />
-  </div>
-  <div>
-    <label>Week : </label> <input type="week" />
-  </div>
-  <div>
-    <label>Time : </label> <input type="time" />
-  </div>
-  <div>
-    <label>Date / Time : </label> <input type="datetime-local" />
-  </div>
+  <h2>Hello form! o/</h2>
+
+  <form id="form">
+    <div>
+      <p>
+        Contact info:
+      </p>
+      <p>
+        <label for="fname">First Name : </label>
+        <input type="text" id="fname" placeholder="First Name" autofocus required />
+      </p>
+      <p>
+        <label for="lname">Last Name : </label>
+        <input type="text" id="lname" placeholder="Last Name" required />
+      </p>
+      <p>
+        <label for="email">Email : </label>
+        <input type="email" id="email" placeholder="email@provider" required />
+      </p>
+      <p>
+        <label for="pwd">Password : </label>
+        <input type="password" id="pwd" placeholder="*****" required />
+      </p>
+      <p>
+        <label></label>
+        <meter form="form" min="0" low="2" high="4" max="5" optimum="5" value="4"></meter>
+      </p>
+      <p>
+        <label for="tel">Tel : </label>
+        <input type="tel" id="tel" placeholder="+33 123456789" />
+      </p>
+      <p>
+        <label for="url">URL : </label>
+        <input type="url" id="url" placeholder="http://www.yoursite.com/" />
+      </p>
+      <p>
+        <input type="submit" value="Submit" />
+      </p>
+    </div>
+    <div>
+      <p>
+        Other things
+      </p>
+      <p>
+        <label for="number">Number : </label>
+        <input type="number" id="number" />
+      </p>
+      <p>
+        <label for="date">Date : </label>
+        <input type="date" id="date" />
+      </p>
+      <p>
+        <label for="month">Month : </label>
+        <input type="month" id="month" />
+      </p>
+      <p>
+        <label for="week">Week : </label>
+        <input type="week" id="week" />
+      </p>
+      <p>
+        <label for="time">Time : </label>
+        <input type="time" id="time" />
+      </p>
+      <p>
+        <label for="date-time">Date / Time : </label>
+        <input type="datetime-local" id="date-time" />
+      </p>
+      <p>
+        <label for="color"> Color : </label>
+        <input type="color" id="color" />
+      </p>
+    </div>
+
+  </form>
 </aside>
 
 <footer>
