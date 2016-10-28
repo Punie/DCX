@@ -36,7 +36,11 @@
       </p>
       <p>
         <label for="pwd">Password </label>
-        <input type="password" name="pwd" placeholder="*****" required />
+        <input id="pwd" type="password" name="pwd" placeholder="*****" required />
+      </p>
+      <p>
+        <label id="pwdlvl"></label>
+        <meter id="meter" form="form" min="0" low="2" high="4" max="5" optimum="5" value="0"></meter>
       </p>
       <p>
         <input type="submit" name="submit" value="Submit" />
@@ -78,6 +82,7 @@
   </div>
 </footer>
 
+<script src="../scripts/script.js"></script>
 </body>
 
 </html>
