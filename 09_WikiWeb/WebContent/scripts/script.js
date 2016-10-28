@@ -17,15 +17,12 @@
       pwdlvl.innerHTML = "Bad";
     } else if (l < 7) {
       meter.value = 2;
-      pwdlvl.innerHTML = "Unsafe";
-    } else if (l < 10) {
-      meter.value = 3;
-      pwdlvl.innerHTML = "Ok-ish";
+      pwdlvl.innerHTML = "Medium";
     } else if (l < 12) {
-      meter.value = 4;
+      meter.value = 3;
       pwdlvl.innerHTML = "Good";
     } else {
-      meter.value = 5;
+      meter.value = 4;
       pwdlvl.innerHTML = "Very Good";
     }
   };
