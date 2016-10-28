@@ -1,6 +1,8 @@
 (function () {
 'use strict';
 
+var doLoad = function ()
+{
   var input = window.document.getElementById ('input');
   input.oninput = function ()
   {
@@ -20,5 +22,8 @@
   {
     email.style.backgroundColor = email.checkValidity () ? "#98c379" : "#e06c75";
   };
+};
+
+window.onload = doLoad ();
 
 }());
