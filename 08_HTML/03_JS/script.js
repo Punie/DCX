@@ -79,4 +79,26 @@ finally
   console.info ("Info : divide (5, 0)");
 }
 
+// object
+var person =
+{
+  name: "Doe",
+  fname: "John",
+  sayHi: function ()
+  {
+    console.log("Hi! o/");
+  }
+};
+
+// object delayed
+var person2 = {};
+person2.name = "Doe";
+person2.fname = "Jane";
+person2.sayHello = function () { console.log("Hello! o/"); };
+
+// ############################################################### //
+
+console.log(window.innerWidth);
+console.log(window.innerHeight);
+
 }());
