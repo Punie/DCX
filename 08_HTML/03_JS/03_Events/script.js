@@ -1,12 +1,10 @@
 (function () {
 'use strict';
 
-  var title = window.document.getElementById('title');
   var input = window.document.getElementById ('input');
-
   input.oninput = function ()
   {
-    title.innerHTML = input.value;
+    window.document.getElementById('title').innerHTML = input.value;
   };
 
 }());
