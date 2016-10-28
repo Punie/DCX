@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>A structured page</title>
+</head>
+
+<body>
+
+<header>
+  <h1>HEADER</h1>
+</header>
+
+<section>
+  <form>
+    <div>
+      <p>
+        New Car :
+      </p>
+      <p>
+        <label for="id">Id : </label>
+        <input type="number" name="id" id="id" required />
+      </p>
+      <p>
+        <label for="ref">Ref : </label>
+        <input type="text" name="ref" id="ref" required />
+      </p>
+      <p>
+        <label for="color">Color : </label>
+        <input type="text" name="color" id="color" required />
+      </p>
+      <p>
+        <label for="brand">Brand : </label>
+        <input type="text" name="brand" id="brand" required />
+      </p>
+      <p>
+        <label for="country">Country : </label>
+        <input type="text" name="country" id="country" required />
+      </p>
+      <p>
+        <label for="price">Price : </label>
+        <input type="text" name="price" id="price" required />
+      </p>
+      <p>
+        <input type="button" id="button" value="Submit" />
+      </p>
+    </div>
+  </form>
+  
+  <table>
+
+    <tr>
+      <th colspan="6">GARAGE</th>
+    </tr>
+
+    <tr>
+      <th class="colname">Id</th>
+      <th class="colname">Ref</th>
+      <th class="colname">Color</th>
+      <th class="colname">Brand</th>
+      <th class="colname">Country</th>
+      <th class="colname">Price</th>
+    </tr>
+
+    <tbody id="body">
+
+    </tbody>
+
+  </table>
+</section>
+
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
