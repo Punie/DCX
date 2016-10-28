@@ -6,6 +6,17 @@ body
   margin: auto;
 }
 
+a
+{
+  color: #98c379;
+  text-decoration: none;
+}
+
+a:hover
+{
+  text-decoration: underline;
+}
+
 
 /* HEADER STYLE */
 header
@@ -37,14 +48,7 @@ header > h1
 
 .main-menu a
 {
-  color: #98c379;
-  text-decoration: none;
   text-transform: uppercase;
-}
-
-.main-menu a:hover
-{
-  text-decoration: underline;
 }
 
 /* SECTION STYLE */
@@ -156,15 +160,13 @@ footer
 footer > div
 {
   flex: 1;
-  display: flex;
   flex-direction: column;
-  border: solid 1px;
 }
 
 footer > div > p
 {
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: auto;
+  margin: 2px;
   padding: 5px;
+  display: block;
+  text-align: center;
 }
