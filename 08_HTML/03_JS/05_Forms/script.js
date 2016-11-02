@@ -40,7 +40,13 @@ var doLoad = function ()
 
   form1.onsubmit = function ()
   {
-    return elem1.value.trim () !== '';
+    for (var elem of elems)
+    {
+      if (elem.value.trim() === '')
+        return false;
+    }
+    return true;
+    // return elem1.value.trim () !== '';
   };
 
   var text = document.getElementById('p1');
