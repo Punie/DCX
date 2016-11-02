@@ -3,21 +3,40 @@
 
 var doLoad = function ()
 {
-  var img = document.getElementById('val');
+  var imgs = document.getElementsByTagName('img');
   var form1 = document.forms.form1;
-  var elem1 = form1.elem1;
+  var elems = form1.elem;
 
-  img.style.visibility = 'hidden';
-  elem1.style.backgroundColor = '#e06c75';
+  console.log(imgs);
 
-  elem1.oninput = function ()
+  var checkval = function ()
   {
-    var val = elem1.value.trim () !== '';
+    var empty = this.value === '';
+    var val = this.value.trim () !== '';
+    var img = this.parentNode.childNodes[3]; // OR var img = this.nextSibling.nextSibling
 
-    img.src = val ? 'img/val.png' : 'img/cnl.png';
-    img.style.visibility = 'visible';
-    elem1.style.backgroundColor = val ? 'initial' : '#e06c75';
+    if (empty)
+    {
+      img.style.visibility = 'hidden';
+      this.style.backgroundColor = 'initial';
+    }
+    else
+    {
+      img.src = val ? 'img/val.png' : 'img/cnl.png';
+      img.style.visibility = 'visible';
+      this.style.backgroundColor = val ? 'initial' : '#e06c75';
+    }
   };
+
+  for (var img of imgs)
+  {
+    img.style.visibility = 'hidden';
+  }
+
+  for (var elem of elems)
+  {
+    elem.oninput = checkval;
+  }
 
   form1.onsubmit = function ()
   {
