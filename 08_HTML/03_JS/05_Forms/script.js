@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 (function () {
 'use strict';
 
@@ -6,8 +8,6 @@ var doLoad = function ()
   var imgs = document.getElementsByTagName('img');
   var form1 = document.forms.form1;
   var elems = form1.elem;
-
-  console.log(imgs);
 
   var checkval = function ()
   {
