@@ -84,6 +84,11 @@ article
   color: #abb2bf;
 }
 
+.comments
+{
+  border: solid 1px #abb2bf;
+}
+
 /* FORM STYLE */
 form
 {
@@ -105,7 +110,7 @@ div > p
   display: flex;
 }
 
-form input:not([type=submit]), form meter
+form input:not([type=submit]), form input:not([type=button]), form meter
 {
   flex: 1;
 }
@@ -127,7 +132,7 @@ input:focus:invalid
   background-color: #e06c75;
 }
 
-input[type="submit"]
+input[type="submit"], input[type="button"]
 {
 	padding: .3em 1em;
 	border: none;
