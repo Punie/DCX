@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bootstrap 101</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ***** CDN ***** -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>My First Bootstrap Page <small>It's fun !</small></h1>
+    <p>This is some text.</p>
+  </div>
+
+  <div class="container">
+    <h2>Blockquotes</h2>
+    <p>The blockquote element is used to present content from another source:</p>
+    <blockquote>
+      <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+      <footer>From WWF's website</footer>
+    </blockquote>
+  </div>
+
+  <div class="container">
+    <h2>Keyboard Inputs</h2>
+    <p>To indicate input that is typically entered via the keyboard, use the kbd element:</p>
+    <p>Use <kbd>ctrl + p</kbd> to open the Print dialog box.</p>
+  </div>
+
+  <div class="container">
+    <h2>Contextual Classes</h2>
+      <p>Contextual classes can be used to color table rows or table cells. The classes that can be used are: .active, .success, .info, .warning, and .danger.</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="success">
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+          </tr>
+          <tr class="danger">
+            <td>Mary</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+          </tr>
+          <tr class="info">
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+
+  <div class="container">
+    <h2>Alerts !</h2>
+    <div class="alert alert-success">
+      <strong>Success!</strong> Indicates a successful or positive action.
+    </div>
+
+    <div class="alert alert-info">
+      <strong>Info!</strong> Indicates a neutral informative change or action.
+    </div>
+
+    <div class="alert alert-warning">
+      <strong>Warning!</strong> Indicates a warning that might need attention.
+    </div>
+
+    <div class="alert alert-danger">
+      <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+    </div>
+  </div>
+
+  <!-- Left-aligned -->
+  <div class="container">
+    <h2>Comments</h2>
+    <div class="media">
+      <div class="media-left">
+        <img src="img/img_avatar1.png" class="media-object" style="width:60px">
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">John Doe <small><i>Posted on February 19, 2016</i></small></h4>
+        <p>Lorem ipsum...</p>
+
+        <!-- Nested media object -->
+        <div class="media">
+          <div class="media-left">
+            <img src="img/img_avatar2.png" class="media-object" style="width:45px">
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">Jane Doe <small><i>Posted on February 19, 2016</i></small></h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right-aligned -->
+    <div class="media">
+      <div class="media-body">
+        <h4 class="media-heading">Jane Doe <small><i>Posted on February 19, 2016</i></small></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="media-right">
+        <img src="img/img_avatar2.png" class="media-object" style="width:60px">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <h2>Button Styles</h2>
+    <button type="button" class="btn btn-default">Default</button>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-link">Link</button>
+  </div>
+
+</body>
+
+</html>
