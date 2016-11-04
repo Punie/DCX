@@ -11,17 +11,18 @@ var doLoad = function ()
   sub.onclick = function ()
   {
     count += 1;
+
     if (count % 2 == 1)
     {
       comments.innerHTML +=
-        '<li class="list-group-item">' +
+        '<li class="list-group-item list-group-item-info">' +
           '<div class="media">' +
+            '<div class="media-left">' +
+              '<img src="img/img_avatar1.png" class="media-object" style="width:60px">' +
+            '</div>' +
             '<div class="media-body">' +
               '<h4 class="media-heading">John Doe <small><i>Posted on February 19, 2016</i></small></h4>' +
               '<p>' + comment.value + '</p>' +
-            '</div>' +
-            '<div class="media-left">' +
-              '<img src="img/img_avatar1.png" class="media-object" style="width:60px">' +
             '</div>' +
           '</div>' +
         '</li>';
@@ -29,7 +30,7 @@ var doLoad = function ()
     else
     {
       comments.innerHTML +=
-        '<li class="list-group-item">' +
+        '<li class="list-group-item list-group-item-success">' +
           '<div class="media">' +
             '<div class="media-body">' +
               '<h4 class="media-heading">Jane Doe <small><i>Posted on February 19, 2016</i></small></h4>' +
@@ -42,6 +43,7 @@ var doLoad = function ()
         '</li>';
     }
 
+    comment.value = "";
   };
 };
 
