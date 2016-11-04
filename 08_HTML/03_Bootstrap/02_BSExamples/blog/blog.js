@@ -11,7 +11,7 @@ var doShow;                                           // Show remove button
 var doHide;                                           // Hide remove button
 var doRemove;                                         // Remove comment method
 
-sub.onclick = function () { doPost(); };
+sub.onclick = function () { doPost (); };
 
 doPost = function ()
 {
@@ -35,7 +35,7 @@ doPost = function ()
           '<img src="img/img_avatar1.png" class="media-object" style="width:60px">' +
         '</div>' +
         '<div class="media-body">' +
-          '<h4 class="media-heading">' + user.value + ' <small><i>Posted on ' + date.toLocaleString() + '</i></small></h4>' +
+          '<h4 class="media-heading">' + user.value + ' <small><i>Posted on ' + date.toLocaleString () + '</i></small></h4>' +
           '<p>' + comment.value + '</p>' +
         '</div>' +
       '</div>' +
@@ -44,8 +44,8 @@ doPost = function ()
   user.value = "";
   comment.value = "";
 
-  var com = document.getElementById(idCom);
-  var btn = document.getElementById(idBtn);
+  var com = document.getElementById (idCom);
+  var btn = document.getElementById (idBtn);
 
   com.setAttribute("onmouseover", "doShow(this)");
   com.setAttribute("onmouseout", "doHide(this)");
@@ -54,13 +54,13 @@ doPost = function ()
 
 doShow = function (elmt)
 {
-  var b = elmt.getElementsByTagName('span');
+  var b = elmt.getElementsByTagName ('span');
   b[0].style.visibility = 'visible';
 };
 
 doHide = function (elmt)
 {
-  var b = elmt.getElementsByTagName('span');
+  var b = elmt.getElementsByTagName ('span');
   b[0].style.visibility = 'hidden';
 };
 
@@ -70,5 +70,5 @@ doRemove = function (elmt)
   var c = elmt.parentNode.parentNode;
 
   numCom.innerHTML = curCom;
-  c.parentNode.removeChild(c);
+  c.parentNode.removeChild (c);
 };
