@@ -164,3 +164,14 @@ h6, .h6 {
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
+
+/*
+ * Button
+ */
+
+.remove {
+  visibility: hidden;
+  color: #ff0000;
+  float: right;
+  font-size: 10px;
+}
