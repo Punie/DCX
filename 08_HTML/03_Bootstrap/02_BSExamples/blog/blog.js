@@ -19,7 +19,8 @@ doPost = function ()
   curCom += 1;
   var date = new Date ();
   var idCom = 'com' + totCom;
-  var idBtn = 'btn' + totCom;
+  var idRem = 'btn' + totCom;
+  var idEdit = 'edit' + totCom;
 
   var comStyle = 'com-';
   if (totCom % 2 == 1) comStyle += 'odd';
@@ -30,13 +31,14 @@ doPost = function ()
   comments.innerHTML +=
     '<li class="list-group-item ' + comStyle + '">' +
       '<div class="media" id="' + idCom + '">' +
-        '<span type="button" class="glyphicon glyphicon-remove remove" id="' + idBtn + '"></span>' +
+        '<span type="button" class="glyphicon glyphicon-remove remove" id="' + idRem + '"></span>' +
+        '<span type="button" class="glyphicon glyphicon-pencil edit" id="' + idEdit + '"></span>' +
         '<div class="media-left">' +
           '<img src="img/img_avatar1.png" class="media-object" style="width:60px">' +
         '</div>' +
         '<div class="media-body">' +
           '<h4 class="media-heading">' + user.value + ' <small><i>Posted on ' + date.toLocaleString () + '</i></small></h4>' +
-          '<p>' + comment.value + '</p>' +
+          '<p class="pre-style">' + comment.value + '</p>' +
         '</div>' +
       '</div>' +
     '</li>';
@@ -45,23 +47,27 @@ doPost = function ()
   comment.value = "";
 
   var com = document.getElementById (idCom);
-  var btn = document.getElementById (idBtn);
+  var rem = document.getElementById (idRem);
+  var edit = document.getElementById (idEdit);
 
-  com.setAttribute("onmouseover", "doShow(this)");
-  com.setAttribute("onmouseout", "doHide(this)");
-  btn.setAttribute("onclick", "doRemove(this)");
+  com.setAttribute ("onmouseover", "doShow(this)");
+  com.setAttribute ("onmouseout", "doHide(this)");
+  rem.setAttribute ("onclick", "doRemove(this)");
+  edit.setAttribute ("onclick", "doEdit(this)");
 };
 
 doShow = function (elmt)
 {
-  var b = elmt.getElementsByTagName ('span');
-  b[0].style.visibility = 'visible';
+  var btns = elmt.getElementsByTagName ('span');
+  for (var i = 0 ; i < btns.length ; ++i)
+    btns[i].style.visibility = 'visible';
 };
 
 doHide = function (elmt)
 {
-  var b = elmt.getElementsByTagName ('span');
-  b[0].style.visibility = 'hidden';
+  var btns = elmt.getElementsByTagName ('span');
+  for (var i = 0 ; i < btns.length ; ++i)
+    btns[i].style.visibility = 'hidden';
 };
 
 doRemove = function (elmt)
@@ -71,4 +77,19 @@ doRemove = function (elmt)
 
   numCom.innerHTML = curCom;
   c.parentNode.removeChild (c);
+};
+
+doEdit = function (elmt)
+{
+  var comArea = elmt.parentNode.getElementsByTagName ('p')[0];
+  var comContent = comArea.innerHTML;
+  comArea.innerHTML =
+    '<form>' +
+      '<div class="form-group">' +
+        '<textarea class="form-control">' + comContent + '</textarea>' +
+      '</div>' +
+      '<div class="form-group">' +
+        '<button class="btn btn-primary" type="button" name="button" id="sub">Submit</button>' +
+      '</div>' +
+    '</form>';
 };
