@@ -166,6 +166,18 @@ h6, .h6 {
 }
 
 /*
+ * List Elem zebra
+ */
+
+.com-odd {
+  background-color: #e4e4e4;
+}
+
+.com-even {
+  background-color: #f9f9f9;
+}
+
+/*
  * Button
  */
 
