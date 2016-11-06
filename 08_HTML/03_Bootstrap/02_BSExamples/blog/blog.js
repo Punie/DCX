@@ -28,7 +28,7 @@ doPost = function ()
 
   numCom.innerHTML = curCom;
 
-  comments.innerHTML +=
+  comments.innerHTML =
     '<li class="list-group-item ' + comStyle + '">' +
       '<div class="media" id="' + idCom + '">' +
         '<span type="button" class="glyphicon glyphicon-remove remove" id="' + idRem + '"></span>' +
@@ -41,7 +41,8 @@ doPost = function ()
           '<p class="pre-style">' + comment.value + '</p>' +
         '</div>' +
       '</div>' +
-    '</li>';
+    '</li>' +
+    comments.innerHTML;
 
   user.value = "";
   comment.value = "";
@@ -83,13 +84,26 @@ doEdit = function (elmt)
 {
   var comArea = elmt.parentNode.getElementsByTagName ('p')[0];
   var comContent = comArea.innerHTML;
+
   comArea.innerHTML =
     '<form>' +
       '<div class="form-group">' +
-        '<textarea class="form-control">' + comContent + '</textarea>' +
+        '<textarea class="form-control" id="comEdit">' + comContent + '</textarea>' +
       '</div>' +
       '<div class="form-group">' +
-        '<button class="btn btn-primary" type="button" name="button" id="sub">Submit</button>' +
+        '<button class="btn btn-primary" type="button" name="button" id="subEdit">Submit</button>' +
       '</div>' +
     '</form>';
+
+  var subEdit = document.getElementById ('subEdit');
+
+  subEdit.setAttribute ("onclick", "doPostEdit(this)");
+};
+
+doPostEdit = function (elmt)
+{
+  var comEdit = document.getElementById ('comEdit');
+  var comArea = elmt.parentNode.parentNode.parentNode;
+
+  comArea.innerHTML = comEdit.value;
 };
