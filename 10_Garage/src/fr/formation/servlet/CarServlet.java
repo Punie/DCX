@@ -25,14 +25,15 @@ public class CarServlet extends HttpServlet
 
         PrintWriter out = response.getWriter();
         
+        out.println ("<h1>Web Garage</h1>");
         out.println ("<table>");
-        out.println ("<tr>" + "<td>Id</td>" + 
-                              "<td>Ref</td>" + 
-                              "<td>Prix</td>" + 
-                              "<td>Couleur</td>" + 
-                              "<td>Nb Portes</td>" + 
-                              "<td>Marque</td>" + 
-                              "<td>Pays</td>" + "</tr>");
+        out.println ("<tr>" + "<td><strong>Id</strong></td>" + 
+                              "<td><strong>Ref</strong></td>" + 
+                              "<td><strong>Prix</strong></td>" + 
+                              "<td><strong>Couleur</strong></td>" + 
+                              "<td><strong>Nb Portes</strong></td>" + 
+                              "<td><strong>Marque</strong></td>" + 
+                              "<td><strong>Pays</strong></td>" + "</tr>");
         for (Voiture v : voitures)
         {
             out.println ("<tr>" + "<td>" + v.id () + "</td>" + 
