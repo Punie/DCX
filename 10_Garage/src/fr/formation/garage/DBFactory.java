@@ -1,4 +1,4 @@
-package fr.formation.database;
+package fr.formation.garage;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -40,5 +40,5 @@ public class DBFactory
     private static Connection connection = null;
     private static final String db = "garage";
     private static final String usr = "hugo";
-    private static final String pwd = "azerty12345";	
+    private static final String pwd = "azerty12345";    
 }
