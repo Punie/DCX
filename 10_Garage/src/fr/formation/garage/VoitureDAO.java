@@ -8,6 +8,51 @@ import java.util.ArrayList;
 
 public class VoitureDAO
 {
+    public static void add (Voiture v)
+    {
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        
+        try
+        {
+            String SQL = "SELECT id FROM Marque WHERE libelle=?";
+            ps = DBFactory.getConnection ().prepareStatement (SQL);
+            ps.setString (1, v.marque ().libelle ());
+            rs = ps.executeQuery ();
+            if (!rs.next ())
+            {
+                SQL = "INSERT INTO Marque (libelle, pays) VALUES (?, ?)";
+                ps.close ();
+                ps = DBFactory.getConnection ().prepareStatement (SQL);
+                ps.setString (1, v.marque ().libelle ());
+                ps.setString (2, v.marque ().pays ());
+                ps.execute ();
+            }
+            
+            SQL = "INSERT INTO Voiture (id_marque, ref, couleur, nb_porte, prix) "
+                    + "VALUES ((SELECT id FROM Marque WHERE libelle=?), ?, ?, ?, ?)";
+            ps.close ();
+            ps = DBFactory.getConnection ().prepareStatement (SQL);
+            
+            ps.setString (1, v.marque ().libelle ());
+            ps.setString (2, v.ref ());
+            ps.setString (3, v.couleur ());
+            ps.setInt (4, v.nbPorte ());
+            ps.setInt (5, v.prix ());
+            ps.execute ();            
+            
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace ();
+        }
+        finally
+        {
+            try { if (rs != null) rs.close (); } catch (SQLException e) {}
+            try { if (ps != null) ps.close (); } catch (SQLException e) {}
+        }
+    }
+    
     public static Voiture getById (int id)
     {
         PreparedStatement ps = null;

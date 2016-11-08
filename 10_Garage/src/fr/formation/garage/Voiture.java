@@ -12,6 +12,16 @@ public class Voiture
         _prix = 0;
     }
 
+    public Voiture (Marque marque, String ref, String couleur, int nbPorte, int prix)
+    {
+        _id = 0;
+        _marque = marque;
+        _ref = ref;
+        _couleur = couleur;
+        _nbPorte = nbPorte;
+        _prix = prix;
+    }
+    
     public Voiture (int id, Marque marque, String ref, String couleur, int nbPorte, int prix)
     {
         _id = id;
