@@ -27,23 +27,21 @@
 
   <div class="container">
 
-    <form class="form-signin">
+    <form class="form-signin" action="login" method="POST">
       <h2 class="form-signin-heading">Please log in</h2>
 
-      <div class="form-group has-feedback">
+      <div class="form-group">
         <label for="login" class="sr-only">Login</label>
         <input type="text" name="login" id="login" class="form-control" placeholder="Login" required autofocus />
-        <span class="glyphicon glyphicon-ok form-control-feedback ok" id="ok"></span>
-        <span class="glyphicon glyphicon-remove form-control-feedback ko" id="ko"></span>
       </div>
       <label for="pwd" class="sr-only">Password</label>
       <input type="password" name="pwd" id="pwd" class="form-control" placeholder="Password" required>
       <div class="checkbox">
         <label>
-          <input type="checkbox" value="remember-me"> Remember me
+          <input type="checkbox" value="remember-me" /> Remember me
         </label>
       </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <input type="submit" class="btn btn-lg btn-primary btn-block" value="Log in" />
     </form>
 
   </div>
