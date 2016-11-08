@@ -16,6 +16,7 @@ public class CarServlet extends HttpServlet
     {
         // voitures.add (new Voiture(1, new Marque ("Mercedes", "Germany"), "ME0001X6", "Noir", 4, 20000));
         voitures = VoitureDAO.getAll ();
+        System.out.println ("Init complete !");
     }
 
     public void doGet (HttpServletRequest request, HttpServletResponse response)
@@ -25,8 +26,22 @@ public class CarServlet extends HttpServlet
 
         PrintWriter out = response.getWriter();
         
+        out.println("<!DOCTYPE html>");
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<meta charset=\"utf-8\" />");
+        out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />");
+        out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" />");
+        out.println("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>");
+        out.println("<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>"); 
+        out.println("<title>Garage</title>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<div class=\"container\">");
         out.println ("<h1>Web Garage</h1>");
-        out.println ("<table>");
+        out.println("</div>");
+        out.println("<div class=\"container\">");
+        out.println ("<table class=\"table table-bordered table-condensed\">");
         out.println ("<tr>" + "<td><strong>Id</strong></td>" + 
                               "<td><strong>Ref</strong></td>" + 
                               "<td><strong>Prix</strong></td>" + 
@@ -45,10 +60,14 @@ public class CarServlet extends HttpServlet
                                   "<td>" + v.marque ().pays () + "</td>" + "</tr>");
         }
         out.println ("</table>");
+        out.println("</div>");
+        out.println("</body>");
+        out.println("</html>");
     }
     
     public void destroy()
     {
         DBFactory.closeConnection ();
+        System.out.println ("Servlet destroyed !");
     }
 }
