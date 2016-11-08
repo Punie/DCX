@@ -8,7 +8,8 @@ import javax.servlet.http.*;
 
 import fr.formation.garage.*;
 
-public class CarServlet extends HttpServlet
+@SuppressWarnings ("serial")
+public class DisplayGarageServlet extends HttpServlet
 {
     private ArrayList<Voiture> voitures = new ArrayList<> ();
 

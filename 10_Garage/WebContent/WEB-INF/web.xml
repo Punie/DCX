@@ -10,12 +10,12 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
-    <servlet-name>ServCar</servlet-name>
-    <servlet-class>fr.formation.servlet.CarServlet</servlet-class>
+    <servlet-name>DisplayGarage</servlet-name>
+    <servlet-class>fr.formation.servlet.DisplayGarageServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>ServCar</servlet-name>
-    <url-pattern>/Cars</url-pattern>
+    <servlet-name>DisplayGarage</servlet-name>
+    <url-pattern>/display-garage</url-pattern>
   </servlet-mapping>
   <servlet>
     <servlet-name>AddCar</servlet-name>

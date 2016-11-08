@@ -10,6 +10,7 @@ import fr.formation.garage.Marque;
 import fr.formation.garage.Voiture;
 import fr.formation.garage.VoitureDAO;
 
+@SuppressWarnings ("serial")
 public class AddCarServlet extends HttpServlet
 {
        
@@ -25,7 +26,7 @@ public class AddCarServlet extends HttpServlet
 	    
 	    VoitureDAO.add (v);
 	    
-	    response.sendRedirect ("Cars");
+	    response.sendRedirect ("display-garage");
 	}
 
 }
