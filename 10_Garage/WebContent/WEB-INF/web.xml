@@ -33,4 +33,28 @@
     <servlet-name>Login</servlet-name>
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>Session</servlet-name>
+    <servlet-class>fr.formation.servlet.SessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Session</servlet-name>
+    <url-pattern>/session</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>PizzasAdmin</servlet-name>
+    <servlet-class>fr.formation.servlet.PizzasAdmin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PizzasAdmin</servlet-name>
+    <url-pattern>/pizzas</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>PizzasClient</servlet-name>
+    <servlet-class>fr.formation.servlet.PizzasClient</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PizzasClient</servlet-name>
+    <url-pattern>/pizza</url-pattern>
+  </servlet-mapping>
 </web-app>
