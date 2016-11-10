@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
-<jsp:useBean id="user" class="fr.formation.wiki.beans.User" scope="request"></jsp:useBean>
+<jsp:useBean id="user" class="fr.formation.wiki.beans.User" scope="session"></jsp:useBean>
 
 <!DOCTYPE html>
 <html>

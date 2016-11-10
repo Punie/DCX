@@ -30,7 +30,7 @@
 				<div class="form-group">
 					<label class="col-sm-4 control-label" for="pwd">Password</label>
 					<div class="col-sm-4">
-						<input class="form-control" type="password" name="pwd" placeholder="Password" required>
+						<input class="form-control" type="password" name="pwd" placeholder="Password" disabled>
 					</div>
 				</div>
 				<div class="form-group">

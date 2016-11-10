@@ -21,10 +21,10 @@ public class Login extends HttpServlet
     {
         String login = request.getParameter ("login");
         User user = UserDAO.getByUserName (login);
-        
-        request.setAttribute ("user", user);
-        RequestDispatcher dispatch = this.getServletContext ().getRequestDispatcher ("/");
-        dispatch.forward (request, response);
+        request.getSession ().setAttribute ("user", user);
+        response.sendRedirect ("index.jsp");
+        // RequestDispatcher dispatch = this.getServletContext ().getRequestDispatcher ("/");
+        // dispatch.forward (request, response);
     }
     
 }
