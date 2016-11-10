@@ -5,48 +5,23 @@ public class User
     // Constructors
     public User ()
     {
-        _userName = "Guest";
-        _type = TypeUser.GUEST;
-    }
-
-    public User (String userName, String firstName, String lastName, TypeUser type)
-    {
-        _userName = userName;
-        _firstName = firstName;
-        _lastName = lastName;
-        _type = type;
+        id = 0;
+        userName = "Guest";
+        type = TypeUser.GUEST;
     }
 
     // Getters & Setters
-    public int id () { return _id; }
-    public void setId (int id) { _id = id; }
+    public int getId () { return id; }
+    public void setId (int id) { this.id = id; }
     
-    public String userName () {	return _userName; }
-    public void setUserName (String userName) { _userName = userName; }
+    public String getUserName () {	return userName; }
+    public void setUserName (String userName) { this.userName = userName; }
 
-    public String firstName () { return _firstName; }
-    public void setFirstName (String firstName) { _firstName = firstName; }
-
-    public String lastName () { return _lastName; }
-    public void setLastName (String lastName)	{ _lastName = lastName; }
-
-    public TypeUser type () { return _type; }
-    public void setType (TypeUser type) { _type = type; }
-
-    // toString () - for testing purposes
-    @Override
-    public String toString ()
-    {
-        if (_firstName == null || _lastName == null)
-            return _userName + " - " + _type;
-
-        return _userName + " (" + _firstName + " " + _lastName + ") - " + _type;
-    }
+    public TypeUser getType () { return type; }
+    public void setType (TypeUser type) { this.type = type; }
 
     // Properties
-    private int _id;
-    private String _userName;
-    private String _firstName;
-    private String _lastName;
-    private TypeUser _type;
+    private int id;
+    private String userName;
+    private TypeUser type;
 }

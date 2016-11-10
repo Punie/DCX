@@ -7,29 +7,30 @@ public abstract class Content
     // Constructors
     public Content ()
     {
-        _author = null;
-        _dateCreated = new Date ();
-        _text = "";
+        id = 0;
+        author = null;
+        dateCreated = null;
+        text = "";
     }
 
     
     // Getters & Setters
-    public int id () { return _id; }
-    public void setId (int id) { _id = id; }
+    public int getId () { return id; }
+    public void setId (int id) { this.id = id; }
     
-    public User author () { return _author; }
-    public void setAuthor (User author) { _author = author; }
+    public User getAuthor () { return author; }
+    public void setAuthor (User author) { this.author = author; }
 
-    public Date dateCreated () { return _dateCreated; }
-    public void setDateCreated (Date date) { _dateCreated = date; }
+    public Date getDateCreated () { return dateCreated; }
+    public void setDateCreated (Date date) { this.dateCreated = date; }
 
-    public String text () { return _text; }
-    public void setText (String text) { _text = text; }
+    public String getText () { return text; }
+    public void setText (String text) { this.text = text; }
 
     
     // Properties
-    protected int _id;
-    protected User _author;
-    protected Date _dateCreated;
-    protected String _text;
+    protected int id;
+    protected User author;
+    protected Date dateCreated;
+    protected String text;
 }

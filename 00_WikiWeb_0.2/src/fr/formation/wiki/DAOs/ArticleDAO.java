@@ -20,11 +20,10 @@ public class ArticleDAO
             String SQL = "INSERT INTO \"Article\" (title, body, nb_like, author, date_created) VALUES (?, ?, ?, ?, ?)";
             ps = DBFactory.getConnection ().prepareStatement (SQL);
             
-            ps.setString (1, article.title ());
-            ps.setString (2, article.text ());
-            ps.setInt (3, article.nbLike ());
-            ps.setInt (4, article.author ().id ());
-            ps.setDate (5, new java.sql.Date(article.dateCreated ().getTime ()));
+            ps.setString (1, article.getTitle ());
+            ps.setString (2, article.getText ());
+            ps.setInt (4, article.getAuthor ().getId ());
+            ps.setDate (5, new java.sql.Date(article.getDateCreated ().getTime ()));
             
             ps.execute ();
         }
@@ -59,7 +58,6 @@ public class ArticleDAO
             article.setId (id);
             article.setTitle (rs.getString ("title"));
             article.setText (rs.getString ("body"));
-            article.setNbLike (rs.getInt ("nb_like"));
             article.setDateCreated (new java.util.Date(rs.getDate ("date_created").getTime ()));
             
             article.setAuthor (UserDAO.getById (rs.getInt ("author")));
@@ -97,7 +95,6 @@ public class ArticleDAO
                 article.setId (rs.getInt ("id"));
                 article.setTitle (rs.getString ("title"));
                 article.setText (rs.getString ("body"));
-                article.setNbLike (rs.getInt ("nb_like"));
                 article.setDateCreated (new java.util.Date(rs.getDate ("date_created").getTime ()));
                 
                 article.setAuthor (UserDAO.getById (rs.getInt ("author")));
@@ -128,11 +125,10 @@ public class ArticleDAO
             String SQL = "UPDATE \"Article\" SET title = ?, body = ?, nb_like = ?, date_created = ? WHERE id = ?";
             ps = DBFactory.getConnection ().prepareStatement (SQL);
             
-            ps.setString (1, article.title ());
-            ps.setString (2, article.text ());
-            ps.setInt (3, article.nbLike ());
-            ps.setDate (4, new java.sql.Date(article.dateCreated ().getTime ()));
-            ps.setInt (5, article.id ());
+            ps.setString (1, article.getTitle ());
+            ps.setString (2, article.getText ());
+            ps.setDate (4, new java.sql.Date(article.getDateCreated ().getTime ()));
+            ps.setInt (5, article.getId ());
             
             ps.execute ();
         }
