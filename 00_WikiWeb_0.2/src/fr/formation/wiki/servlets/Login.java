@@ -3,7 +3,6 @@ package fr.formation.wiki.servlets;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,8 +22,6 @@ public class Login extends HttpServlet
         User user = UserDAO.getByUserName (login);
         request.getSession ().setAttribute ("user", user);
         response.sendRedirect ("index.jsp");
-        // RequestDispatcher dispatch = this.getServletContext ().getRequestDispatcher ("/");
-        // dispatch.forward (request, response);
     }
     
 }
